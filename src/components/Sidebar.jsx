@@ -62,22 +62,71 @@ function Sidebar() {
       <div className="space-y-8 pl-5">
         
         <div>
-          <span className="logo font-bold text-pretty text-4xl">BlogSphere</span>
+          <span className="logo font-bold text-pretty text-5xl">BlogSphere</span>
         </div>
 
         {/* Dynamic Navigation Menu */}
-        <div className="space-y-4">
-          {navigationMenu.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-3 cursor-pointer hover:text-primary"
-              onClick={() => handleNavigation(item.path)}
-            >
-              <div className="text-lg">{item.icon}</div>
-              <div className="text-md font-medium">{item.title}</div>
+        
+        {/* <div className="space-y-4">
+        {navigationMenu.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:bg-indigo-50 transition-transform duration-300 ease-in-out cursor-pointer"
+            onClick={() => handleNavigation(item.path)}
+          >
+            <div className="flex items-center justify-center w-12 h-12 bg-red-100 text-red-600 rounded-full shadow-inner">
+              {item.icon}
             </div>
-          ))}
-        </div>
+            <div className="flex flex-col">
+              <div className="text-lg font-semibold text-gray-800">{item.title}</div>
+              <div className="text-sm text-gray-500">
+                {item.description || ""}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div> */}
+
+<div className="space-y-4">
+  {navigationMenu.map((item, index) => (
+    <div
+      key={index}
+      className="flex items-center space-x-4 px-6 py-3 bg-grey-100 text-black-600 rounded-full shadow-md hover:bg-indigo-200 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+      onClick={() => handleNavigation(item.path)}
+    >
+      {/* Icon Section */}
+      <div className="flex items-center justify-center w-10 h-10 bg-white text-red-600 rounded-full shadow-inner">
+        {item.icon}
+      </div>
+
+      {/* Title Section */}
+      <div className="text-lg font-semibold">{item.title}</div>
+    </div>
+  ))}
+</div>
+
+
+{/* <div className="space-y-4">
+  {navigationMenu.map((item, index) => (
+    <div
+      key={index}
+      className="flex items-center space-x-4 py-2 cursor-pointer text-gray-700 hover:text-indigo-600 hover:underline"
+      onClick={() => handleNavigation(item.path)}
+    >
+      <div className="text-xl">{item.icon}</div>
+      <div className="text-lg">{item.title}</div>
+    </div>
+  ))}
+</div> */}
+
+
+
+
+
+
+
+
+
       </div>
 
       {/* Bottom Section */}

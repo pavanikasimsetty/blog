@@ -18,6 +18,25 @@ export const createPost = createAsyncThunk(
     }
 );
 
+export const deletePost = createAsyncThunk(
+    "post/deletePost",
+    async ({ postId, jwt }, { rejectWithValue }) => {
+      try {
+        // Make DELETE request to the backend
+        const response = await axios.delete(`${API_BASE_URL}/api/posts/${postId}`, {
+          headers: {
+            Authorization: jwt, // Add JWT token to the Authorization header
+          },
+        });
+        console.log("Post Deleted Successfully:", response.data);
+        return { postId, message: response.data.message }; // Return deleted post ID and message
+      } catch (error) {
+        console.error("Error Deleting Post:", error.response?.data || error.message);
+        return rejectWithValue(error.response?.data || "An error occurred");
+      }
+    }
+  );
+
 export const getAllPosts = createAsyncThunk(
     "post/getAllPosts",
     async (_,{ rejectWithValue }) => {

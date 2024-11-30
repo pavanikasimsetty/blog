@@ -4,6 +4,21 @@ import { Card, Typography } from "@mui/material";
 
 function HomeRight() {
   // Array of promotional content (video links or GIFs)
+  // const ads = [
+  //   {
+  //     id: 1,
+  //     type: "video",
+  //     src: "https://www.w3schools.com/html/mov_bbb.mp4",
+  //     title: "Learn React Today!",
+  //   },
+  //   {
+  //     id: 2,
+  //     type: "gif",
+  //     src: "https://media.giphy.com/media/3o6ZsYm5G7mJdEY3S0/giphy.gif",
+  //     title: "Boost Your Coding Skills!",
+  //   },
+  // ];
+
   const ads = [
     {
       id: 1,
@@ -14,10 +29,29 @@ function HomeRight() {
     {
       id: 2,
       type: "gif",
-      src: "https://media.giphy.com/media/3o6ZsYm5G7mJdEY3S0/giphy.gif",
-      title: "Boost Your Coding Skills!",
+      src: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif",
+      title: "Master Algorithms and Data Structures!",
+    },
+    {
+      id: 3,
+      type: "gif",
+      src: "https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif",
+      title: "Build Your First Web App!",
+    },
+    {
+      id: 4,
+      type: "video",
+      src: "https://www.w3schools.com/html/movie.mp4",
+      title: "Become a Full-Stack Developer!",
+    }, 
+    {
+      id: 5,
+      type: "video",
+      src: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
+      title: "Kickstart Your Programming Journey!",
     },
   ];
+  
 
   return (
     <div className="pr-5 space-y-6">

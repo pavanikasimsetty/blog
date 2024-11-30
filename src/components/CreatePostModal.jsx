@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import { uploadToCloudinary } from "../utils/uploadToCloudinary";
 import {useDispatch} from 'react-redux';
 import { createPost } from "../state/Post/post.action";
+import { indigo } from "@mui/material/colors";
 
 const style = {
   position: "absolute",
@@ -159,7 +160,7 @@ function CreatePostModal({ open, handleClose }) {
           </div>
         </form>
         <Backdrop
-          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          sx={{ color: indigo[500], zIndex: (theme) => theme.zIndex.drawer + 1 }}
           open={isLoading}
           onClick={handleClose}
         >

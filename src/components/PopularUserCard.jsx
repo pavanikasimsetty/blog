@@ -3,14 +3,14 @@ import {
   Avatar,
   Button
 } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { indigo, red } from "@mui/material/colors";
 
 function PopularUserCard() {
   return (
     <div>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: indigo[500] }} aria-label="recipe">
             R
           </Avatar>
         }
